@@ -9,7 +9,7 @@
       src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
     ></script>
     <style>
-      #reveal {
+      #model {
         height: 800px;
         width: auto;
       }
@@ -17,12 +17,17 @@
   </head>
   <body>
     <model-viewer
-      id="reveal"
-      loading="eager"
+      id="model"
       camera-controls
       touch-action="pan-y"
       ar
       src="../../models/trex/scene.gltf"
     ></model-viewer>
   </body>
+  <script>
+    window.addEventListener("load", () => {
+      let modelViewer = document.getElementById("model");
+      modelViewer.activateAR();
+    });
+  </script>
 </html>
