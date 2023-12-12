@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script
+      type="module"
+      src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"
+    ></script>
+    <style>
+      #reveal {
+        height: 800px;
+        width: 800px;
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer
+      id="reveal"
+      loading="eager"
+      camera-controls
+      touch-action="pan-y"
+      ar
+      src="../../models/trex/scene.gltf"
+    ></model-viewer>
+  </body>
+</html>
