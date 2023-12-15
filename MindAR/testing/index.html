@@ -10,22 +10,22 @@
   <body style="margin: 0px; overflow: hidden">
     <!-- Scene-Setup. filterMinCF and filterBeta are for Smoothing Control. Lower filterMinCF (Cutoff Frequency) reduces jittering and increasing value of filterBeta reduces delay. They are, however, fighting against each other. WarmUp Tolerance to intentionally delay the target found event to avoid a false positive. Miss Tolerance: Intentional delay to trigger target lost event. -->
     <a-scene
-      mindar-image="imageTargetSrc: ../targets.mind; filterMinCF: 0.001; filterBeta: 5; warmupTolerance: 10; missTolerance: 10‚;"
+      mindar-image="imageTargetSrc: ../targets.mind; filterMinCF: 0.001; filterBeta: 5; warmupTolerance: 10; missTolerance: 10;"
       color-space="sRGB"
       renderer="colorManagement: true, physicallyCorrectLights"
       vr-mode-ui="enabled: false"
       device-orientation-permission-ui="enabled: false"
     >
       <a-assets>
-        <a-assets-item id="untitled-gltf" src="../../models/cube/scene.gltf">
-        </a-assets-item>
+        <a-asset-item id="untitled-gltf" src="../../models/cube/cube30x30.glb">
+        </a-asset-item>
       </a-assets>
       <a-camera position="0 0 0" look-controls="enabled: false"></a-camera>
       <a-entity mindar-image-target="targetIndex: 0">
         <a-gltf-model
           rotation="90 0 0"
           position="0 0 0"
-          scale="0.1 0.1 0.1"
+          scale="1 1 1"
           src="#untitled-gltf"
         ></a-gltf-model>
       </a-entity>
