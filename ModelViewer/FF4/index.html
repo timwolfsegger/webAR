@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="module" src="../model-viewer.min.js"></script>
+    <style>
+      #model {
+        height: 800px;
+        width: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <model-viewer
+      id="model"
+      camera-controls
+      touch-action="pan-y"
+      ar
+      src="../../models/cube/cube30x30.glb"
+      ios-src="../../models/cube/cube30x30.usdz"
+    ></model-viewer>
+  </body>
+</html>
